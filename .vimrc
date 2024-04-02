@@ -1,5 +1,11 @@
-" startup message
+" ************************
+" ******* HI, MOM! ******* 
+" ************************
+
+" Startup Message
 echomsg "Hi, mom!"
+autocmd CursorHold * :echo "Hi, Mom!"
+autocmd CursorHoldI * :echo "Hi, Mom!"
 
 " line numbers
 set relativenumber number 
@@ -18,6 +24,14 @@ set showmatch matchtime=2
 nnoremap <space> <Nop>
 let mapleader = " "
 let maplocalleader = "\\"
+
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+
+inoremap <esc> <Nop>
+inoremap jk <esc>
 
 " move a line down
 noremap - ddp
@@ -48,3 +62,27 @@ iabbrev ccopy Copyright 2024 Dan Moore, All Rights Reserved
 iabbrev adn and
 iabbrev waht what
 iabbrev tehn then
+
+
+" ************************
+" ********* HTML ********* 
+" ************************
+
+autocmd BufWritePre,BufRead *.html :normal gg=G
+autocmd BufNewFile,BufRead *.html setlocal nowrap
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
