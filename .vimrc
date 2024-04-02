@@ -31,3 +31,15 @@ nnoremap <c-u> viw~
 
 nnoremap <Leader>ev :tabnew $MYVIMRC<cr>
 nnoremap <Leader>sv :source $MYVIMRC<cr>
+
+" abbreviations
+iabbrev @@ dan.howard.moore.24@gmail.com
+iabbrev ccopy Copyright 2024 Dan Moore, All Rights Reserved
+
+iabbrev adn and
+iabbrev waht what
+iabbrev tehn then
+
+
+
+
