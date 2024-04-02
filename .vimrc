@@ -29,6 +29,15 @@ noremap _ ddkP
 inoremap <c-u> <esc>lviw~i
 nnoremap <c-u> viw~
 
+" add quotes and backticks
+nnoremap <Leader>" viw<esc>a"<esc>bi"<esc>lel
+nnoremap <Leader>' viw<esc>a'<esc>bi'<esc>lel
+nnoremap <Leader>` viw<esc>a`<esc>bi`<esc>lel
+vnoremap <Leader>" <esc>`<i"<esc>`>a"<esc>
+vnoremap <Leader>' <esc>`<i'<esc>`>a'<esc>
+vnoremap <Leader>` <esc>`<i`<esc>`>a`<esc>
+
+" open and source vimrc
 nnoremap <Leader>ev :tabnew $MYVIMRC<cr>
 nnoremap <Leader>sv :source $MYVIMRC<cr>
 
@@ -39,7 +48,3 @@ iabbrev ccopy Copyright 2024 Dan Moore, All Rights Reserved
 iabbrev adn and
 iabbrev waht what
 iabbrev tehn then
-
-
-
-
