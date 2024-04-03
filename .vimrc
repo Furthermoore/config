@@ -4,8 +4,10 @@
 
 " Startup Message
 echomsg "Hi, mom!"
-autocmd CursorHold * :echo "Hi, Mom!"
-autocmd CursorHoldI * :echo "Hi, Mom!"
+augroup startup_message
+	autocmd!
+	autocmd CursorHold * :echo "Hi, Mom!"
+augroup END
 
 " line numbers
 set relativenumber number 
@@ -47,9 +49,9 @@ nnoremap <c-u> viw~
 nnoremap <Leader>" viw<esc>a"<esc>bi"<esc>lel
 nnoremap <Leader>' viw<esc>a'<esc>bi'<esc>lel
 nnoremap <Leader>` viw<esc>a`<esc>bi`<esc>lel
-vnoremap <Leader>" <esc>`<i"<esc>`>a"<esc>
-vnoremap <Leader>' <esc>`<i'<esc>`>a'<esc>
-vnoremap <Leader>` <esc>`<i`<esc>`>a`<esc>
+vnoremap <Leader>" <esc>`>a"<esc>`<i"<esc>el
+vnoremap <Leader>' <esc>`>a'<esc>`<i'<esc>el
+vnoremap <Leader>` <esc>`>a`<esc>`<i`<esc>el
 
 " open and source vimrc
 nnoremap <Leader>ev :tabnew $MYVIMRC<cr>
@@ -62,27 +64,15 @@ iabbrev ccopy Copyright 2024 Dan Moore, All Rights Reserved
 iabbrev adn and
 iabbrev waht what
 iabbrev tehn then
-
+iabbrev improce improve
+iabbrev improced improved
 
 " ************************
 " ********* HTML ********* 
 " ************************
 
-autocmd BufWritePre,BufRead *.html :normal gg=G
-autocmd BufNewFile,BufRead *.html setlocal nowrap
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+augroup filetype_html
+	autocmd BufWritePre,BufRead *.html :normal gg=G
+	autocmd BufNewFile,BufRead *.html setlocal nowrap
+augroup END
+utocmd BufNewFile,BufRead *.html setlocal nowrap
