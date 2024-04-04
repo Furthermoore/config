@@ -1,5 +1,5 @@
 " ************************
-" ******* HI, MOM! ******* 
+" ******* HI, MOM! *******
 " ************************
 
 " Startup Message
@@ -8,6 +8,18 @@ augroup startup_message
 	autocmd!
 	autocmd CursorHold * :echo "Hi, Mom!"
 augroup END
+
+" Status Line
+set noruler
+filetype on
+set laststatus=2
+set statusline=%.20f     	 " Path to the file
+set statusline+=%y         " Filetype of the file
+set statusline+=%=   	     " Switch to right align
+set statusline+=%5l        " Current line
+set statusline+=/          " Separator
+set statusline+=%-3L       " Filetype of the file
+set statusline+=[%p%%]\ \ \ 
 
 " line numbers
 set relativenumber number 
@@ -75,4 +87,4 @@ augroup filetype_html
 	autocmd BufWritePre,BufRead *.html :normal gg=G
 	autocmd BufNewFile,BufRead *.html setlocal nowrap
 augroup END
-utocmd BufNewFile,BufRead *.html setlocal nowrap
+
