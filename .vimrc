@@ -2,14 +2,14 @@
 " ******* HI, MOM! *******
 " ************************
 
-" Startup Message
+" Startup Message/*{{{*/
 echomsg "Hi, mom!"
 augroup startup_message
 	autocmd!
 	autocmd CursorHold * :echo "Hi, Mom!"
-augroup END
+augroup END/*}}}*/
 
-" Status Line
+" Status Line/*{{{*/
 set noruler
 filetype on
 set laststatus=2
@@ -19,21 +19,9 @@ set statusline+=%=   	     " Switch to right align
 set statusline+=%5l        " Current line
 set statusline+=/          " Separator
 set statusline+=%-3L       " Filetype of the file
-set statusline+=[%p%%]\ \ \ 
+set statusline+=[%p%%]\ \ \ }}}
 
-" line numbers
-set relativenumber number 
-
-" TEXT wrapping
-set wrap linebreak
-
-" shifting, tabbing, autoindent
-set shiftround shiftwidth=2
-set tabstop=2
-
-set showmatch matchtime=2
-
-" custom key mappings
+" Key Mappings/*{{{*/
 
 nnoremap <space> <Nop>
 let mapleader = " "
@@ -67,9 +55,9 @@ vnoremap <Leader>` <esc>`>a`<esc>`<i`<esc>el
 
 " open and source vimrc
 nnoremap <Leader>ev :tabnew $MYVIMRC<cr>
-nnoremap <Leader>sv :source $MYVIMRC<cr>
+nnoremap <Leader>sv :source $MYVIMRC<cr>}}}
 
-" abbreviations
+" Abbreviations/*{{{*/
 iabbrev @@ dan.howard.moore.24@gmail.com
 iabbrev ccopy Copyright 2024 Dan Moore, All Rights Reserved
 
@@ -77,14 +65,31 @@ iabbrev adn and
 iabbrev waht what
 iabbrev tehn then
 iabbrev improce improve
-iabbrev improced improved
+iabbrev improced improved/*}}}*/
 
-" ************************
-" ********* HTML ********* 
-" ************************
+" Code Folding/*{{{*/
+set foldlevelstart=0
+augroup filetype_vim
+	autocmd!
+	autocmd FileType vim setlocal foldmethod=marker
+augroup END/*}}}*/
+
+" HTML  /*{{{*/
 
 augroup filetype_html
 	autocmd BufWritePre,BufRead *.html :normal gg=G
 	autocmd BufNewFile,BufRead *.html setlocal nowrap
-augroup END
+augroup END/*}}}*/
+
+" line numbers
+set relativenumber number 
+
+" TEXT wrapping
+set wrap linebreak
+
+" shifting, tabbing, autoindent
+set shiftround shiftwidth=2
+set tabstop=2
+
+set showmatch matchtime=2
 
