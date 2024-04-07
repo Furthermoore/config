@@ -64,6 +64,9 @@ iabbrev ccopy Copyright 2024 Dan Moore, All Rights Reserved
 iabbrev adn and
 iabbrev waht what
 iabbrev tehn then
+iabbrev taht that
+iabbrev hvae have
+iabbrev notive notice
 iabbrev improce improve
 iabbrev improced improved/*}}}*/
 
@@ -93,3 +96,5 @@ set tabstop=2
 
 set showmatch matchtime=2
 
+" Search highlighting
+set hlsearch incsearch
