@@ -23,6 +23,8 @@ set statusline+=[%p%%]\ \ \ }}}
 
 " Key Mappings/*{{{*/
 
+inoremap jk <esc>
+
 nnoremap <space> <Nop>
 let mapleader = " "
 let maplocalleader = "\\"
@@ -31,9 +33,6 @@ noremap <Left> <Nop>
 noremap <Right> <Nop>
 noremap <Up> <Nop>
 noremap <Down> <Nop>
-
-inoremap <esc> <Nop>
-inoremap jk <esc>
 
 " move a line down
 noremap - ddp
@@ -98,3 +97,5 @@ set showmatch matchtime=2
 
 " Search highlighting
 set hlsearch incsearch
+
+let g:netrw_liststyle=3
