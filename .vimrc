@@ -1,14 +1,3 @@
-" ************************
-" ******* HI, MOM! *******
-" ************************
-
-" Startup Message/*{{{*/
-echomsg "Hi, mom!"
-augroup startup_message
-	autocmd!
-	autocmd CursorHold * :echo "Hi, Mom!"
-augroup END/*}}}*/
-
 " Status Line/*{{{*/
 set noruler
 filetype on
@@ -57,9 +46,6 @@ nnoremap <Leader>ev :tabnew $MYVIMRC<cr>
 nnoremap <Leader>sv :source $MYVIMRC<cr>}}}
 
 " Abbreviations/*{{{*/
-iabbrev @@ dan.howard.moore.24@gmail.com
-iabbrev ccopy Copyright 2024 Dan Moore, All Rights Reserved
-
 iabbrev adn and
 iabbrev waht what
 iabbrev tehn then
@@ -99,3 +85,12 @@ set showmatch matchtime=2
 set hlsearch incsearch
 
 let g:netrw_liststyle=3
+
+" Startup Message/*{{{*/
+echomsg "Hi, mom!"
+augroup startup_message
+	autocmd!
+	autocmd CursorHold * :echo "Hi, Mom!"
+augroup END/*}}}*/
+
+
