@@ -1,0 +1,13 @@
+---
+"pane_group:navigate_down": ctrl-j
+"editor_view:insert_autosuggestion": tab
+"pane_group:add_down": ctrl--
+"input:clear_screen": none
+"pane_group:add_right": ctrl-shift-|
+"pane_group:navigate_right": ctrl-l
+"editor_view:backspace": none
+"input:open_completion_suggestions": ctrl-space
+"pane_group:navigate_left": ctrl-h
+"pane_group:navigate_up": ctrl-k
+"editor_view:insert_newline": none
+"editor_view:cut_all_right": none
