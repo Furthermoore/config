@@ -16,9 +16,7 @@ return {
 
 		-- keymaps
 		local keymap = vim.keymap
-		keymap.set("n", "<leader>tt", "<cmd>NvimTreeToggle<cr>")
-		keymap.set("n", "<leader>tf", "<cmd>NvimTreeFindFileToggle<cr>")
-		keymap.set("n", "<leader>tc", "<cmd>NvimTreeCollapse<cr>")
+		keymap.set("n", "<leader>tt", "<cmd>NvimTreeFindFileToggle!<cr>")
 		keymap.set("n", "<leader>tr", "<cmd>NvimTreeRefresh<cr>")
 
 	end
