@@ -7,6 +7,7 @@ vim.opt.shiftwidth = 2
 
 -- wrap text
 vim.opt.wrap = true
+vim.opt.linebreak = true
 -- and preserve the indentation of virtual lines
 
 -- ignore uppercase letters
@@ -16,8 +17,14 @@ vim.opt.smartcase = true
 
 -- disable search result highlighting
 vim.opt.hlsearch = false
--- keybindings
 
+-- always display several lines after EOF
+vim.opt.scrolloff = 10
+
+-- use <leader>l to view diagnostic info instead
+vim.diagnostic.config({ virtual_text = false })
+
+-- keybindings
 vim.g.mapleader = ' '
 vim.g.maplocalleader = '\\'
 vim.keymap.set('n', '<leader>w', '<cmd>write<cr>', { desc = 'Save' })
@@ -25,6 +32,7 @@ vim.keymap.set('n', '<leader>q', '<cmd>q<cr>', { desc = 'Quit' })
 vim.keymap.set('n', '<leader>e', '<cmd>tabnew $MYVIMRC<cr>', { desc = 'Edit Config' })
 vim.keymap.set('n', '<leader>s', '<cms>source $MYVIMRC<cr>', { desc = 'Source Config' })
 vim.keymap.set('i', 'jk', '<esc>', { desc = 'Escape' })
+vim.keymap.set("n", "<leader>l", "<cmd>lua vim.diagnostic.open_float()<cr>")
 
 -- pane switching
 vim.keymap.set('n', '<c-h>', '<c-w>h', { desc = 'Move left one pane' })
