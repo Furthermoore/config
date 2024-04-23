@@ -19,11 +19,38 @@ return {
  
       opts.desc = "Show documentation for what is under cursor"
       vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+
+			opts.desc = "Jump to declaration for what is under cursor"
+			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+
+			opts.desc = "Jump to definition for what is under cursor"
+			vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+
+			opts.desc = "Jump to implementation for what is under cursor"
+			vim.keymap.set("n", "di", vim.lsp.buf.implementation, opts)
+
+			opts.desc = "Get signature help for what is under cursor"
+			vim.keymap.set("n", "<leader>s", vim.lsp.buf.signature, opts)
+
+			opts.desc = "Get type defintion for what is under cursor"
+			vim.keymap.set("n", "<leader>T", vim.lsp.buf.type)
+
+			opts.desc = "Format!"
+			vim.keymap.set("n", "<leader>F", function()
+				vim.lsp.buf.format { async = true }
+			end, opts)
     end
  
     lspconfig["sourcekit"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
+			filetypes = {'swift', 'c', 'cpp', 'objective-c', 'objective-cpp'},
+			root_dir = function()
+				return vim.loop.cwd()
+			end,
     })
+
+		
+
 	end,
 }

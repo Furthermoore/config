@@ -1,3 +1,5 @@
+print("Hi, mom!")
+
 vim.g.have_nerd_font = true
 vim.opt.number = true
 vim.opt.rnu = true
@@ -41,5 +43,5 @@ vim.keymap.set('n', '<c-k>', '<c-w>k', { desc = 'Move up one pane' })
 vim.keymap.set('n', '<c-l>', '<c-w>l', { desc = 'Move right one pane' })
 
 -- copy/paste to system clipboard
-vim.keymap.set({'n', 'x'}, 'gy', '+y')
-vim.keymap.set({'n', 'x'}, 'gp', '+p')
+vim.keymap.set({'n', 'x'}, 'gy', '"*y')
+vim.keymap.set({'n', 'x'}, 'gp', '"*p')
