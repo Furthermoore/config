@@ -7,7 +7,7 @@ return {
     local xcodebuild = require("xcodebuild.integrations.dap")
  
     -- TODO: change it to your local codelldb path
-    local codelldbPath = os.getenv("HOME") .. "/Users/danmoore/tools/CodeLLDB/extension/adapter/codelldb"
+    local codelldbPath = os.getenv("HOME") .. "/Desktop/CodeLLDB/extension/adapter/codelldb"
  
     xcodebuild.setup(codelldbPath)
  
