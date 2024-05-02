@@ -1,1 +1,1 @@
-# terminal, editor, and plugin configs, dotfiles, etc.
+# terminal, nvim, tmux, dotfiles, plugin configs, etc.
